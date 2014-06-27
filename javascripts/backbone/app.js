@@ -52,7 +52,7 @@ var pages = [
       page     : "about",
       heading  : "about",
       imageUrl : "",
-      content  : "I like to knit. Thanks for asking. I went to school for a long time and came out a doctor. But I like making things more than I like thinking quietly in isolation about things so I became a web developer.",
+      content  : "I like to knit. Thanks for asking. I went to school for a long time and came out a doctor*. But I like making things more than I like thinking quietly in isolation about things so I became a web developer.*Of media...",
       span1    : "",
       span2    : "",
       videoMp4 : "",
@@ -111,6 +111,7 @@ Portfolio.Router = Backbone.Router.extend({
 Portfolio.Models.Page = Backbone.Model.extend({
    defaults: {
       page     : "",
+      heading  : "",
       imageUrl : "",
       content  : "",
       span1    : "",
@@ -152,12 +153,6 @@ Portfolio.Views.PageView = Backbone.View.extend({
       return this;
    }
 })
-
-
-// <!-- APP -->
-
-
-
 
 
 // <!-- ON LOAD -->
