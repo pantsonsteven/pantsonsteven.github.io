@@ -3,6 +3,9 @@
 <head>
    <meta charset="UTF-8">
    <title>Calculator</title>
+   <link rel="stylesheet" href="stylesheets/base.css">
+   <link rel="stylesheet" href="stylesheets/layout.css">
+   <link rel="stylesheet" href="stylesheets/skeleton.css">
    <link rel="stylesheet" href="stylesheets/styles.css">
 
    <!-- LIBRARIES -->
@@ -11,7 +14,25 @@
    <script type="text/javascript" src='javascripts/libraries/backbone.js'></script>
    
    <!-- TEMPLATES -->
-   <script type="text/template" class=""></script>
+   <script type="text/template" class="section-template">
+      <div class="<%- section %> section">
+         <h2 class="<%- section %> heading"><%- heading %></h2>
+         <img src="<%- imgUrl %>" class="<%- section %> image">
+         <p class="<%- section %> content">
+            <%- content %>
+         </p>
+         <span class="<%- section %> span1">
+            <%- span1 %>
+         </span>
+         <span class="<%- section %> span2">
+            <%- span2 %>
+         </span>   
+         <video width="300" height="300" class="<%- section %> video" autoplay loop>
+            <source src="<%- videoMp4 %>" type="video/mp4">
+            <source src="<%- videoOgg %>" type="video/ogg">  
+         </video>
+      </div> 
+   </script>
 
    <!-- MODEL -->
    <!-- COLLECTION -->
@@ -22,8 +43,8 @@
 
 
 </head>
-<body>
-   
+
+ 
 
 
 
