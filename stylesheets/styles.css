@@ -1,3 +1,7 @@
+ul {
+   text-align: right;
+}
+
 li {
    display: inline-block;
    box-sizing: border-box;

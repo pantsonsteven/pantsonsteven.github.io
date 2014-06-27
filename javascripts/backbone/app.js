@@ -12,7 +12,8 @@ var pages = [
       page     : "index",
       heading  : "index",
       imageUrl : "",
-      content  : "ask me about my knitting",
+      content1 : "ask me about my knitting",
+      content2 : "",
       span1    : "",
       span2    : "",
       videoMp4 : "",
@@ -21,8 +22,9 @@ var pages = [
    {
       page     : "peddlr",
       heading  : "peddlr",
-      imageUrl : "",
-      content  : "peddlr is an app that helps you plan your Citi Bike trips",
+      imageUrl : "./images/peddlr.jpg",
+      content1 : "peddlr is an app that helps you plan your Citi Bike trips",
+      content2 : "",
       span1    : "",
       span2    : "",
       videoMp4 : "",
@@ -31,8 +33,9 @@ var pages = [
    {
       page     : "valence",
       heading  : "valence",
-      imageUrl : "",
-      content  : "Valence lets you visualize and shape your playlists",
+      imageUrl : "./images/valence01.jpg",
+      content1 : "Valence lets you visualize and shape your playlists",
+      content2 : "",
       span1    : "",
       span2    : "",
       videoMp4 : "",
@@ -42,7 +45,8 @@ var pages = [
       page     : "publications",
       heading  : "publications",
       imageUrl : "",
-      content  : "Once upon a time I was an academic, here's some of my work",
+      content1 : "Once upon a time I was an academic, here's some of my work",
+      content2 : "",
       span1    : "",
       span2    : "",
       videoMp4 : "",
@@ -52,7 +56,8 @@ var pages = [
       page     : "about",
       heading  : "about",
       imageUrl : "",
-      content  : "I like to knit. Thanks for asking. I went to school for a long time and came out a doctor*. But I like making things more than I like thinking quietly in isolation about things so I became a web developer.*Of media...",
+      content1 : "I like to knit. Thanks for asking. I went to school for a long time and came out a doctor*. But I like making things more than I like thinking quietly in isolation about things so I became a web developer.",
+      content2 : "*Of media...",
       span1    : "",
       span2    : "",
       videoMp4 : "",
@@ -112,12 +117,13 @@ Portfolio.Models.Page = Backbone.Model.extend({
    defaults: {
       page     : "",
       heading  : "",
-      imageUrl : "",
-      content  : "",
+      imageUrl : null,
+      content1  : "",
+      content2 : "",
       span1    : "",
       span2    : "",
-      videoMp4 : "",
-      videoOgg : ""
+      videoMp4 : null,
+      videoOgg : null
    }
 });
 
