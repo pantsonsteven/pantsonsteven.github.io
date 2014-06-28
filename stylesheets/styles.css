@@ -1,3 +1,11 @@
+.container {
+   height: 1000px;
+}
+
+header {
+   height: 50px;
+}
+
 ul {
    text-align: right;
 }
@@ -6,4 +14,21 @@ li {
    display: inline-block;
    box-sizing: border-box;
    padding: 10px;
+}
+
+.page {
+   position: absolute;
+   top: 50px;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   -webkit-transition: -webkit-transform 0.75s ease;
+           transition: transform 0.75s ease;
+   -webkit-transform: translate3d(0, 50%, 0);
+           transform: translate3d(0, 50%, 0);
+}
+
+.page.is-visible {
+   -webkit-transform: translate3d(0, 0, 0);
+           transform: translate3d(0, 0, 0);
 }

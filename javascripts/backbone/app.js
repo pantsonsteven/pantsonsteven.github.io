@@ -9,64 +9,74 @@ var Portfolio = {
 
 var pages = [
    {
-      page     : "index",
-      heading  : "index",
-      imageUrl : "",
-      content1 : "ask me about my knitting",
-      content2 : "",
-      span1    : "",
-      span2    : "",
-      videoMp4 : "",
-      videoOgg : ""
+      page        : "index",
+      heading     : "index",
+      imageUrl    : "",
+      content1    : "ask me about my knitting",
+      content2    : "",
+      span1       : "",
+      span2       : "",
+      videoMp4    : "",
+      videoOgg    : "",
+      videoWidth  : "",
+      videoHeight : ""
    },
    {
-      page     : "peddlr",
-      heading  : "peddlr",
-      imageUrl : "./images/peddlr.jpg",
-      content1 : "peddlr is an app that helps you plan your Citi Bike trips",
-      content2 : "",
-      span1    : "",
-      span2    : "",
-      videoMp4 : "",
-      videoOgg : ""
+      page        : "peddlr",
+      heading     : "peddlr",
+      imageUrl    : "./images/peddlr.jpg",
+      content1    : "peddlr is an app that helps you plan your Citi Bike trips",
+      content2    : "",
+      span1       : "",
+      span2       : "",
+      videoMp4    : "",
+      videoOgg    : "",
+      videoWidth  : "",
+      videoHeight : ""
    },
    {
-      page     : "valence",
-      heading  : "valence",
-      imageUrl : "./images/valence01.jpg",
-      content1 : "Valence lets you visualize and shape your playlists",
-      content2 : "",
-      span1    : "",
-      span2    : "",
-      videoMp4 : "",
-      videoOgg : ""
+      page        : "valence",
+      heading     : "valence",
+      imageUrl    : "./images/valence01.jpg",
+      content1    : "Valence lets you visualize and shape your playlists",
+      content2    : "",
+      span1       : "",
+      span2       : "",
+      videoMp4    : "",
+      videoOgg    : "",
+      videoWidth  : "",
+      videoHeight : ""
    },
    {
-      page     : "publications",
-      heading  : "publications",
-      imageUrl : "",
-      content1 : "Once upon a time I was an academic, here's some of my work",
-      content2 : "",
-      span1    : "",
-      span2    : "",
-      videoMp4 : "",
-      videoOgg : ""
+      page        : "publications",
+      heading     : "publications",
+      imageUrl    : "",
+      content1    : "Once upon a time I was an academic, here's some of my work",
+      content2    : "",
+      span1       : "",
+      span2       : "",
+      videoMp4    : "",
+      videoOgg    : "",
+      videoWidth  : "",
+      videoHeight : ""
    },
    {
-      page     : "about",
-      heading  : "about",
-      imageUrl : "",
-      content1 : "I like to knit. Thanks for asking. I went to school for a long time and came out a doctor*. But I like making things more than I like thinking quietly in isolation about things so I became a web developer.",
-      content2 : "*Of media...",
-      span1    : "",
-      span2    : "",
-      videoMp4 : "",
-      videoOgg : ""
+      page        : "about",
+      heading     : "about",
+      imageUrl    : "",
+      content1    : "I like to knit. Thanks for asking. I went to school for a long time and came out a doctor*. But I like making things more than I like thinking quietly in isolation about things so I became a web developer.",
+      content2    : "*Of media...",
+      span1       : "",
+      span2       : "",
+      videoMp4    : "",
+      videoOgg    : "",
+      videoWidth  : "",
+      videoHeight : ""
    }
 ]
 
 Portfolio.initialize = function() {
-   this.viewManager   = new Portfolio.Views.ViewManager({el: $('.container')})
+   this.viewManager   = new Portfolio.Views.ViewManager({el: $('.page-wrapper')})
    this.collection    = new Portfolio.Collections.PageCollection(pages);
    this.router        = new Portfolio.Router();
    Backbone.history.start();
@@ -79,6 +89,7 @@ Portfolio.Router = Backbone.Router.extend({
    },
    routes: {
    ''             : 'index',
+   'home'         : 'index',
    'peddlr'       : 'peddlr',
    'valence'      : 'valence',
    'publications' : 'publications',
@@ -122,8 +133,10 @@ Portfolio.Models.Page = Backbone.Model.extend({
       content2 : "",
       span1    : "",
       span2    : "",
-      videoMp4 : null,
-      videoOgg : null
+      videoMp4 : "",
+      videoOgg : "",
+      videoWidth: null,
+      videoHeight: null
    }
 });
 
@@ -136,28 +149,73 @@ Portfolio.Collections.PageCollection = Backbone.Collection.extend({
 
 // <!-- VIEW MANAGER -->
 Portfolio.Views.ViewManager = Backbone.View.extend({
+
    display : function(view) {
+
       var previousView = this.currentView || null;
       var nextView     = view;
-      if (previousView){
-         previousView.remove();
-      };
-      nextView.render().$el.hide().appendTo(this.$el).fadeIn();
-      this.currentView = nextView;
-   }
 
+      nextView.render({ page: true }).$el.appendTo(this.$el);
+
+      if (previousView){
+
+         nextView.transitionIn(function() {
+            previousView.remove();
+         });
+         this.currentView = nextView;
+
+      } else {
+
+         nextView.transitionIn();
+         this.currentView = nextView; 
+
+      };
+
+
+   }
 });
+
+
 
 
 // <!-- VIEW -->
 Portfolio.Views.PageView = Backbone.View.extend({
+   
    template : _.template($('.page-template').html()),
-   render   : function() {
+
+   render   : function(options) {
+
+      options = options || {};
+
       var html = (this.template(this.model.attributes));
       this.$el.html(html);
-      $('container').append(this.$el);
+      this.$el.addClass(this.model.attributes.page+' section')
+
+      if (options.page === true){
+         this.$el.addClass('page');
+      }
+
+      $('.page-wrapper').append(this.$el);
       return this;
-   }
+   },
+
+   transitionIn: function(callback) {
+      var that = this;
+      var animateIn = function() {
+         that.$el.addClass('is-visible');
+         that.$el.one('transitionend', function () {
+            console.log("all loaded!")
+            if (_.isFunction(callback)) {
+               callback();
+               console.log('it worked')
+            }
+         });
+      };
+
+      _.delay(animateIn, 20);
+
+   },
+
 })
 
 
