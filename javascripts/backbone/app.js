@@ -200,21 +200,24 @@ Portfolio.Views.PageView = Backbone.View.extend({
    },
 
    transitionIn: function(callback) {
+
       var that = this;
+
       var animateIn = function() {
+         
          that.$el.addClass('is-visible');
+
          that.$el.one('transitionend', function () {
-            console.log("all loaded!")
+
             if (_.isFunction(callback)) {
                callback();
-               console.log('it worked')
             }
          });
       };
 
       _.delay(animateIn, 20);
 
-   },
+   }
 
 })
 

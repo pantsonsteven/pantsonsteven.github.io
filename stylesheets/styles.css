@@ -1,9 +1,13 @@
+body {
+   height: 100vh;
+}
+
 .container {
-   height: 1000px;
+   height: 100%;
 }
 
 header {
-   height: 50px;
+   z-index: 2;
 }
 
 ul {
@@ -16,16 +20,21 @@ li {
    padding: 10px;
 }
 
+.section {
+   background-color: pink;
+}
+
 .page {
+   z-index: -1;
    position: absolute;
-   top: 50px;
+   top: 0;
    right: 0;
    bottom: 0;
    left: 0;
    -webkit-transition: -webkit-transform 0.75s ease;
            transition: transform 0.75s ease;
-   -webkit-transform: translate3d(0, 50%, 0);
-           transform: translate3d(0, 50%, 0);
+   -webkit-transform: translate3d(0, 100%, 0);
+           transform: translate3d(0, 100%, 0);
 }
 
 .page.is-visible {
