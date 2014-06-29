@@ -163,9 +163,10 @@ Portfolio.Views.ViewManager = Backbone.View.extend({
       var previousView = this.currentView || null;
       var nextView     = view;
 
-
       if (previousView){
-         nextView.render({ page: true }).$el.appendTo(this.$el);
+         nextView.render()
+            .$el
+            .appendTo(this.$el);
          nextView.transitionIn(function() {
             previousView.remove();
          });
@@ -190,15 +191,9 @@ Portfolio.Views.ViewManager = Backbone.View.extend({
 Portfolio.Views.PageView = Backbone.View.extend({
    template : _.template($('.page-template').html()),
    render   : function(options) {
-      options = options || {};
       var html = (this.template(this.model.attributes));
       this.$el.html(html);
-      this.$el.addClass(this.model.attributes.page+' section')
-
-      if (options.page === true){
-         this.$el.addClass('page');
-      }
-
+      this.$el.addClass(this.model.attributes.page+' page')
       $('.page-wrapper').append(this.$el);
       return this;
    },

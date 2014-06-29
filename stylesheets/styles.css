@@ -24,7 +24,8 @@ li {
    background-color: pink;
 }
 
-.page {`
+.page {
+   background-color: pink;
    z-index: -1;
    position: absolute;
    top: 50px;
