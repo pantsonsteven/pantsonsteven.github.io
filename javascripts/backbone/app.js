@@ -10,6 +10,7 @@ var Portfolio = {
 
 var pages = [
 {
+   position    : 1,
    page        : "index",
    heading     : "index",
    imageUrl    : "",
@@ -23,6 +24,7 @@ var pages = [
    videoHeight : ""
 },
 {
+   position    : 2,
    page        : "peddlr",
    heading     : "peddlr",
    imageUrl    : "./images/peddlr.jpg",
@@ -36,6 +38,7 @@ var pages = [
    videoHeight : ""
 },
 {
+   position    : 3,   
    page        : "valence",
    heading     : "valence",
    imageUrl    : "./images/valence01.jpg",
@@ -49,6 +52,7 @@ var pages = [
    videoHeight : ""
 },
 {
+   position    : 4,
    page        : "publications",
    heading     : "publications",
    imageUrl    : "",
@@ -62,6 +66,7 @@ var pages = [
    videoHeight : ""
 },
 {
+   position    : 5,
    page        : "about",
    heading     : "about",
    imageUrl    : "",
@@ -125,7 +130,7 @@ Portfolio.Router = Backbone.Router.extend({
    about: function() {
       var page             = this.collection.where({page: 'about'})[0];
       var aboutView        = new Portfolio.Views.PageView({ model : page });
-      Portfolio.viewManager.display(aboutView);   
+      Portfolio.viewManager.display(aboutView);
    }
 });
 
@@ -134,17 +139,18 @@ Portfolio.Router = Backbone.Router.extend({
 // <!-- MODEL -->
 Portfolio.Models.Page = Backbone.Model.extend({
    defaults: {
-      page     : "",
-      heading  : "",
-      imageUrl : null,
-      content1  : "",
-      content2 : "",
-      span1    : "",
-      span2    : "",
-      videoMp4 : "",
-      videoOgg : "",
-      videoWidth: null,
-      videoHeight: null
+      position    : null,
+      page        : "",
+      heading     : "",
+      imageUrl    : null,
+      content1    : "",
+      content2    : "",
+      span1       : "",
+      span2       : "",
+      videoMp4    : null,
+      videoOgg    : null,
+      videoWidth  : null,
+      videoHeight : null
    }
 });
 
@@ -163,24 +169,24 @@ Portfolio.Views.ViewManager = Backbone.View.extend({
       var previousView = this.currentView || null;
       var nextView     = view;
 
-      if (previousView){
-         nextView.render()
+      if (previousView){ 
+         nextView.render({bottom: true})
             .$el
             .appendTo(this.$el);
          nextView.transitionIn(function() {
             previousView.remove();
          });
-      } else {
-         nextView.render({ page: true })
+      } else { // for initial page load or reload
+         nextView.render({centered: true}) 
             .$el
-            .css({
-               "-webkit-transform"  : "translate3d(0, 0, 0)",
-               "transform"          : "translate3d(0, 0, 0)"
-            })
             .hide()
             .appendTo(this.$el)
             .fadeIn(); 
       };
+
+      var position = nextView.model.get('position');
+      nextView.renderAboveAndBelowPage(position);
+
       this.currentView = nextView;
    }
 });
@@ -194,6 +200,17 @@ Portfolio.Views.PageView = Backbone.View.extend({
       var html = (this.template(this.model.attributes));
       this.$el.html(html);
       this.$el.addClass(this.model.attributes.page+' page')
+
+      options = options || null;
+
+      if (options.bottom === true){
+         this.$el.addClass('bottom');
+      } else if (options.top === true){
+         this.$el.addClass('top');
+      } else if (options.centered === true){
+         this.$el.addClass('centered');
+      }
+
       $('.page-wrapper').append(this.$el);
       return this;
    },
@@ -206,12 +223,36 @@ Portfolio.Views.PageView = Backbone.View.extend({
          });
       };
       _.delay(animateIn, 20);
-   }
-})
+   },
+   renderAboveAndBelowPage: function(position) {
+      var pages = Portfolio.collection;
+
+      if (position > 1){
+         var above = getPageAbove(pages, position);
+         var below = getPageBelow(pages, position);
+      };
+   },
+
+});
+
+
+function getAbovePage (collection, position) {
+   var above = collection.find(function(page) {
+         return page.get('page') === parseInt(position-1);
+      });
+   return above;
+}
+
+function getBelowPage (collection, position) {
+   var below = collection.find(function(page) {
+      return page.get('page') === parseInt(position+1);
+   });
+   return below;
+}
 
 
 // ---------------------------------------------------------------------------
 // <!-- ON LOAD -->
 $(function() {
    Portfolio.initialize();
-})
+});

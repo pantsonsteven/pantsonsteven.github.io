@@ -34,11 +34,19 @@ li {
    left: 0;
    -webkit-transition: -webkit-transform 0.75s ease;
            transition: transform 0.75s ease;
-   -webkit-transform: translate3d(0, 100%, 0);
-           transform: translate3d(0, 100%, 0);
 }
 
 .page.is-visible {
    -webkit-transform: translate3d(0, 0, 0);
            transform: translate3d(0, 0, 0);
+}
+
+.bottom {
+   -webkit-transform: translate3d(0, 100%, 0);
+           transform: translate3d(0, 100%, 0);
+}
+
+.top {
+   -webkit-transform: translate3d(0, 100%, 0);
+           transform: translate3d(0, 100%, 0);
 }
