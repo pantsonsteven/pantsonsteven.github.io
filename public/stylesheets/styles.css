@@ -1,18 +1,93 @@
-/*font-family: 'Antic', sans-serif;*/
-/*font-family: 'Ubuntu', sans-serif;*/
 
-section {
-   color: white;
+
+/*
+* Skeleton V1.2
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 6/20/2012
+*/
+
+/* Table of Content
+==================================================
+   #Site Styles
+   #Page Styles
+   #Media Queries
+   #Font-Face */
+
+/* #Site Styles
+================================================== */
+
+body {
+   font-family: 'inconsolatamedium', 'Courier', serif;
+   font-size: 1.5em;
 }
 
-.first {
-   background-color: blue;
+h1 {
+   font-family: 'brandon_textmedium', 'Avenir', 'Helvatics', sans-serif;
+   font-size: 5em;
+   line-height: .5em;
 }
 
-.second {
-   background-color: red;
+.main, .nav {
+   margin-top: 5%;
 }
 
-.third {
-   background-color: green;
+
+/* #Page Styles
+================================================== */
+
+/* #Media Queries
+================================================== */
+
+   /* Smaller than standard 960 (devices and browsers) */
+   @media only screen and (max-width: 959px) {}
+
+   /* Tablet Portrait size to standard 960 (devices and browsers) */
+   @media only screen and (min-width: 768px) and (max-width: 959px) {}
+
+   /* All Mobile Sizes (devices and browser) */
+   @media only screen and (max-width: 767px) {}
+
+   /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+   @media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+   /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+   @media only screen and (max-width: 479px) {}
+
+
+/* #Font-Face
+================================================== */
+@font-face {
+    font-family: 'brandon_textlight';
+    src: url('../fonts/brandontext-light-webfont.eot');
+    src: url('../fonts/brandontext-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/brandontext-light-webfont.woff') format('woff'),
+         url('../fonts/brandontext-light-webfont.ttf') format('truetype'),
+         url('../fonts/brandontext-light-webfont.svg#brandon_textlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'inconsolatamedium';
+    src: url('../fonts/inconsolata-webfont.eot');
+    src: url('../fonts/inconsolata-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/inconsolata-webfont.woff') format('woff'),
+         url('../fonts/inconsolata-webfont.ttf') format('truetype'),
+         url('../fonts/inconsolata-webfont.svg#inconsolatamedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'brandon_textmedium';
+    src: url('../fonts/brandontext-medium-webfont.eot');
+    src: url('../fonts/brandontext-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/brandontext-medium-webfont.woff') format('woff'),
+         url('../fonts/brandontext-medium-webfont.ttf') format('truetype'),
+         url('../fonts/brandontext-medium-webfont.svg#brandon_textmedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
