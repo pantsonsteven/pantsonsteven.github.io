@@ -32,7 +32,7 @@ body {
 }
 
 .container {
-  height: 100vh;
+  height: 90vh;
 }
 
 h1 {
@@ -47,6 +47,7 @@ h1 {
 }
 
 .nav {
+  postion: fixed;
   margin-top: 20%;
   margin-bottom: 20%;
 }
@@ -63,41 +64,64 @@ li {
 
 .first {
   background-color: #fcfcf6;
+  border-top-color: #fcfcf6 !important;
 }
 
 .second {
-  background-color: green
+  background-color: green;
+  border-bottom-color: green !important;
+  border-top-color: green !important;
 }
 
 .third {
   background-color: purple;
+  border-bottom-color: purple !important;
+  border-top-color: purple !important;
 }
 
 .fourth {
   background-color: orange;
+  border-bottom-color: orange !important;
+  border-top-color: orange !important;
 }
 
 .fifth {
   background-color: cyan;
+  border-bottom-color: cyan !important;
+  border-top-color: cyan !important;
 }
 
-a {
-
-  text-decoration: none;
+.pointer-wrapper {
+  height: 5vh;
 }
 
-a:visited {
-  color: #3a3a3a;
+.pointer {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 5vh solid transparent;
+  border-right: 5vh solid transparent;
+  background-color: transparent;
 }
 
-a:hover {
-  color: #57764d;
+.up {
+  left: 50%;
+  border-bottom: 5vh solid;
 }
 
-a:active { 
-  color: white; 
-  background-color: #57764d;
+.down {
+  right: 50%;
+  border-top: 5vh solid;  
 }
+
+#pink {
+  background-color: pink;
+}
+
+#cyan {
+  background-color: cyan;
+}
+
 
 /* #Page Styles
 ================================================== */
