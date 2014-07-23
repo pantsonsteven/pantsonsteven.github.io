@@ -24,6 +24,8 @@ a {
    text-decoration: none;
    color: #00687f;
    font-weight: bold;
+   padding-left: 1%;
+   padding-right: 1%;
 }
 
 a:hover {
@@ -63,16 +65,33 @@ a:hover {
    text-align: left;
 }
 
-.description {
+.screenshot {
+   border: solid 1px grey;
+   box-shadow: 5px 5px 3px grey;
+   /*margin-top: 4%;*/
+}
+
+.work-sample {
    height: 33%;
    text-align: left;
+   clear: both;
 }
+
 
 .header {
    height: 100%;
    text-align: center;
 }
 
+.description {
+   font-family: "inconsolatamedium", "Courier", monospace;
+   font-size: .75em;
+   
+}
+
+.description p {
+   padding-left: 5%;
+}
 /*-------- FONTS --------*/
 /*font-family: 'brandon_textmedium', 'Avenir', 'Helvetica', sans-serif;*/
 /*font-family: 'brandon_textlight', 'Avenir', 'Helvetica', sans-serif;*/
