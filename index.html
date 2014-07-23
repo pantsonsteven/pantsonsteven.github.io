@@ -4,16 +4,20 @@
    <meta charset="UTF-8">
    <title>Ask Me About My Knitting –– The Online Portfolio for Steven Doran</title>
 
-  <link rel="stylesheet" href="public/stylesheets/styles.css">
-  <link rel="stylesheet" href="public/stylesheets/fonts.css">
+   <!-- <link rel="stylesheet" href="public/stylesheets/base.css"> -->
+   <link rel="stylesheet" href="public/stylesheets/skeleton.css">
+   <!-- <link rel="stylesheet" href="public/stylesheets/layout.css"> -->
+   <link rel="stylesheet" href="public/stylesheets/styles.css">
 
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+   <link href='http://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
 
-  <script src="javascripts/sripts.js"></script>
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+   <script src="javascripts/scripts.js"></script>
 
 </head>
 <body>
-   
+
    <!-- 
    * Home
    * About
@@ -22,12 +26,85 @@
    * Contact -->
 
    <div class="container">
-     <div class="home">
-       
-     </div>
+      <div class="nav sixteen columns links">
+         <span>|</span>
+         <a class="nav-bar" href="#home">HOME</a>
+         <span>|</span>
+         <a class="nav-bar" href="#work">WORK</a>
+         <span>|</span>
+         <a class="nav-bar" href="#resume">RESUME</a>
+         <span>|</span>
+         <a class="nav-bar" href="about">ABOUT</a>
+         <span>|</span>
+      </div>
+   </div>
+
+   <div class="wrapper">
+      <div id="home" class="content container">
+         <div class="alpha ten columns">
+            <h1 class="splash">Steven Doran is a full stack web developer and recovering academic based in New York City.</h1>
+            <div class="row">
+               <div class="seven columns alpha links">
+                  <span>|</span>
+                  <a href="mailto:stevenedwarddoran@gmail.com">Email</a>
+                  <span>|</span>
+                  <a href="http://www.linkedin.com/in/stevenedwarddoran/" target="_blank">LinkedIn</a>
+                  <span>|</span>
+                  <a href="https://github.com/pantsonsteven" target="_blank">GitHub</a>
+                  <span>|</span>
+               </div>
+            </div>
+         </div>
+         <div class="six columns omega">
+            <img class="headshot" src="public/images/headshot3.jpg" alt="Steven Doran" width="100%">
+         </div>
+      </div>
+   </div>
+
+
+   <div class="wrapper">
+      <div id="work" class="content container">
+
+         <div class="row alpha description">
+            <h2 class="alpha one-third column">Peddlr</h2>
+            <div class="omega one-third column">
+               <img src="public/images/peddlr.jpg" alt="peddlr" class="screenshot" width="100%">
+            </div>
+         </div>
+
+         <div class="row alpha description">
+            <h2 class="alpha one-third column">Valence</h2>
+            <div class="one-third column">
+               <img src="public/images/valence1.gif" alt="Valence" class="screenshot" width="100%">
+            </div>
+            <div class="omega one-third column">
+               <img src="public/images/valence2.gif" alt="Valence" class="screenshot omega" width="100%">
+            </div>
+         </div>
+
+         <div class="row alpha description">
+            <h2 class="alpha one-third column">JustWrite</h2>
+            <div class="omega one-third column">
+               <img src="public/images/justwrite.jpg" alt="JustWrtie" class="screenshot" width="100%">
+            </div>
+         </div>
+
+      </div>
+   </div>
+
+
+
+   <div class="wrapper">
+      <div id="about" class="content container">
+         <div class="about">
+            <div class="content nine columns alpha">
+               <p>In the spring of 2014, I completed my Doctorate in Communications and Media Studies. During my PhD I taught and researched topics in new media, technology studies, and cultural studies. When I left unviersity I enrolled in <a href="https://generalassemb.ly/education/web-development-immersive" target="_blank">General Assembly's Web Development Immersive bootcamp</a> to learn how to make things. </p>
+            </div>
+         </div>
+      </div>
    </div>
    
-   
+
 
 </body>
 </html>
