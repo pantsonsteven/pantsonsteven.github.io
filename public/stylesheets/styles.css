@@ -1,5 +1,9 @@
+html, body {
+   height: 100%;
+}
+
 .wrapper {
-   height: 100vh;
+   height: 90vh;
    width: 100vw;
 }
 
@@ -48,6 +52,10 @@ a:hover {
    font-size: 1.25em;
 }
 
+.menu {
+   height: 10vh;
+}
+
 .nav {
    margin-top: 3%;
    /*text-align: center;*/
@@ -60,8 +68,8 @@ a:hover {
 }
 
 .content {
-   margin-top: 2%;
    height: 100%;
+   overflow: hidden;
 }
 
 .headshot {
@@ -70,21 +78,21 @@ a:hover {
    text-align: left;
 }
 
+.title {
+   height: 10%;
+}
+
 .screenshot {
    border: solid 1px grey;
    box-shadow: 5px 5px 3px grey;
-   /*margin-top: 4%;*/
+}
+
+#work {
 }
 
 .work-sample {
-   height: 33%;
+   height: 90%;
    text-align: left;
-   clear: both;
-}
-
-.header {
-   height: 100%;
-   text-align: center;
 }
 
 .description {
@@ -92,8 +100,24 @@ a:hover {
    font-size: .75em;
 }
 
-.description p {
-   padding-left: 5%;
+.work-header h3 {
+   height: 90%;
+}
+
+.work-header a {
+   margin-bottom: 5px;
+}
+
+.work-description-envelope {
+   height: 100%;
+}
+
+.work-description {
+   height: 30%;
+}
+
+.work-description p {
+   margin-top: 5px;
 }
 
 .res-header {
