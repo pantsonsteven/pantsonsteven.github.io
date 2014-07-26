@@ -120,14 +120,22 @@ a:hover {
    margin-top: 5px;
 }
 
-.res-header {
+.header-title {
+   padding-bottom: 5px;
    border-bottom: solid 1px black;
 }
 
-.res-header h3 {
-   margin-bottom: 5px;
+.experience-envelope, .tech-ed-envelope {
+   height: 90%;
 }
 
+.tech-skills, .non-tech-skills {
+   height: 35%;
+}
+
+.education {
+   height: 65%;
+}
 /*-------- FONTS --------*/
 /*font-family: 'brandon_textmedium', 'Avenir', 'Helvetica', sans-serif;*/
 /*font-family: 'brandon_textlight', 'Avenir', 'Helvetica', sans-serif;*/
