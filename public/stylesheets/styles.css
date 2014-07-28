@@ -25,6 +25,12 @@ h3 {
    line-height: 1em;
 }
 
+h4 {
+   font-family: 'brandon_textmedium', 'Avenir', 'Helvetica', sans-serif;
+   font-size: 1em;
+   line-height: 1em; 
+}
+
 p {
    font-family: 'inconsolatamedium', 'Courier', serif;
    font-size: 1.3em;
@@ -123,6 +129,22 @@ a:hover {
 .header-title {
    padding-bottom: 5px;
    border-bottom: solid 1px black;
+   margin-bottom: 3px;
+}
+
+.exp-desc-envelope {
+   margin-top: 5px;
+   margin-bottom: 5px;
+}
+
+.year-envelope {
+   text-align: right;
+   /*display: inline-block;*/
+}
+
+.res-subhead, .res-subhead-year {
+   margin-top: 0;
+   margin-bottom: 0;
 }
 
 .experience-envelope, .tech-ed-envelope {
