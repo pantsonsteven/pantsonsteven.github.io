@@ -49,6 +49,10 @@ a:hover {
    background-color: #00687f;
 }
 
+.splash-envelope {
+   margin-top: 10%;
+}
+
 .splash {
    margin-bottom: .35em;
 }
@@ -79,9 +83,10 @@ a:hover {
 }
 
 .headshot {
-   margin-top: 25%;
+   /*margin-top: 25%;*/
    border-radius: 50%;
-   text-align: left;
+   border: solid 1px grey;
+   text-align: right;
 }
 
 .title {
@@ -91,9 +96,6 @@ a:hover {
 .screenshot {
    border: solid 1px grey;
    box-shadow: 5px 5px 3px grey;
-}
-
-#work {
 }
 
 .work-sample {
@@ -132,7 +134,7 @@ a:hover {
    margin-bottom: 3px;
 }
 
-.exp-desc-envelope {
+.res-desc-envelope {
    margin-top: 5px;
    margin-bottom: 5px;
 }
@@ -155,6 +157,10 @@ a:hover {
 
 .res-description {
    font-size: .95em;
+}
+
+.res-description ul {
+   padding-left: 1.5em;
 }
 
 .experience-envelope, .tech-ed-envelope {
