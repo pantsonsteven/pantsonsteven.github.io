@@ -139,12 +139,22 @@ a:hover {
 
 .year-envelope {
    text-align: right;
-   /*display: inline-block;*/
 }
 
 .res-subhead, .res-subhead-year {
    margin-top: 0;
    margin-bottom: 0;
+}
+
+.res-location {
+   font-family: "brandon_textmedium_italic", 'Avenir', "Helvetica", sans-serif;
+   font-size: .95em;
+   line-height: 1em;
+   margin-top: 2px;
+}
+
+.res-description {
+   font-size: .95em;
 }
 
 .experience-envelope, .tech-ed-envelope {
