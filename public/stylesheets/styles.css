@@ -75,6 +75,17 @@ a:hover {
 .nav-bar {
    padding-left: 2%;
    padding-right: 2%;
+   cursor: pointer;
+}
+
+.current {
+   background-color: #00687f;
+   color: white;
+}
+
+.hover {
+ background-color: #00687f;
+ color: white; 
 }
 
 .content {
