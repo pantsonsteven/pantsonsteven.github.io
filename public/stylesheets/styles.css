@@ -1,3 +1,5 @@
+/****** BASE ******/
+
 html, body {
    height: 100%;
    margin: 0;
@@ -6,6 +8,11 @@ html, body {
 .wrapper {
    height: 90vh;
    width: 100vw;
+}
+
+.content {
+   height: 100%;
+   overflow: hidden;
 }
 
 h1 {
@@ -50,18 +57,17 @@ a:hover {
    background-color: #00687f;
 }
 
-.splash-envelope {
-   margin-top: 10%;
+.title {
+   height: 10%;
 }
 
-.splash {
-   margin-bottom: .35em;
+.description {
+   font-family: "inconsolatamedium", "Courier", monospace;
+   font-size: .75em;
 }
 
-.links {
-   font-family: 'inconsolatamedium', 'Courier', serif;
-   font-size: 1.25em;
-}
+
+/****** NAV BAR ******/
 
 .menu {
    height: 10vh;
@@ -93,21 +99,24 @@ a:hover {
  color: white; 
 }
 
-.content {
-   height: 100%;
-   overflow: hidden;
+
+/****** HOME ******/
+
+.splash-envelope {
+   margin-top: 10%;
 }
 
-.headshot {
-   /*margin-top: 25%;*/
-   border-radius: 50%;
-   border: solid 1px grey;
-   text-align: right;
+.splash {
+   margin-bottom: .35em;
 }
 
-.title {
-   height: 10%;
+.links {
+   font-family: 'inconsolatamedium', 'Courier', serif;
+   font-size: 1.25em;
 }
+
+
+/****** WORK ******/
 
 .screenshot {
    border: solid 1px grey;
@@ -119,10 +128,6 @@ a:hover {
    text-align: left;
 }
 
-.description {
-   font-family: "inconsolatamedium", "Courier", monospace;
-   font-size: .75em;
-}
 
 .work-header h3 {
    height: 90%;
@@ -143,6 +148,9 @@ a:hover {
 .work-description p {
    margin-top: 5px;
 }
+
+
+/****** RESUME ******/
 
 .header-title {
    padding-bottom: 5px;
@@ -190,11 +198,18 @@ a:hover {
 .education {
    height: 65%;
 }
-/*-------- FONTS --------*/
-/*font-family: 'brandon_textmedium', 'Avenir', 'Helvetica', sans-serif;*/
-/*font-family: 'brandon_textlight', 'Avenir', 'Helvetica', sans-serif;*/
-/*font-family: 'inconsolatamedium', 'Courier', serif;*/
 
+
+/****** ABOUT ******/
+
+.headshot {
+   margin-top: 5%;
+   border-radius: 50%;
+   border: solid 1px grey;
+   text-align: right;
+}
+
+/*-------- FONTS --------*/
 
 @font-face {
    font-family: 'brandon_textlight';
