@@ -8,10 +8,6 @@ html, body {
    width: 100vw;
 }
 
-.hidden {
-   display: none; 
-}
-
 h1 {
    font-family: 'brandon_textmedium', 'Avenir', 'Helvetica', sans-serif;
    line-height: 1em;

@@ -14,8 +14,8 @@ function menuToggle(clickedItem) {
 
 function makeVisible(div) {
   var visible = $('.visible');
-  visible.addClass('hidden').removeClass('visible');
-  div.addClass('visible').removeClass('hidden');
+  visible.removeClass('visible animated fadeInLeft').hide();
+  div.addClass('visible animated fadeInLeft').show();
 }
 
 function menuClick() {
@@ -47,6 +47,11 @@ function menuClick() {
 
 
 function appInitialize() {
+  $('.section').hide();
+  var home = $('.home');
+  home.addClass('visible');
+  makeVisible(home);
+
   menuHighlight();
   menuClick();
 
