@@ -118,16 +118,48 @@ a:hover {
 
 /****** WORK ******/
 
+.screenshot-wrapper {
+   position: relative;
+}
+
 .screenshot {
+   box-sizing:border-box;
+   -moz-box-sizing:border-box;
+   -webkit-box-sizing:border-box;
    border: solid 1px grey;
-   box-shadow: 5px 5px 3px grey;
+}
+
+.info {
+   font-family: "inconsolatamedium", "Courier", monospace;
+   background-color:#1a1a1a;
+   text-align: center;
+   display: block;
+   color:lightgray;
+   float:left;
+   position:absolute;
+   top:0px;
+   height: 100%;
+   width: 100%;
+   opacity: 0;
+   -webkit-transition: opacity .7s ease;
+}
+
+.info ul{
+   color: white;
+   font-size: 1.2em;
+   line-height: 1.5em;
+   list-style: none;
+   padding: 0;
+}
+
+.screenshot-wrapper:hover .info{
+ opacity: .8;
 }
 
 .work-sample {
    height: 90%;
    text-align: left;
 }
-
 
 .work-header h3 {
    height: 90%;
