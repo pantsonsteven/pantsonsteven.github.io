@@ -184,6 +184,16 @@ a:hover {
 
 /****** RESUME ******/
 
+.resume h2{
+   display: inline-block;
+}
+
+.pdf-link {
+   font-family: "inconsolatamedium", "Courier", monospace;
+   font-size: 1em;
+   display: inline-block;
+}
+
 .header-title {
    padding-bottom: 5px;
    border-bottom: solid 1px black;
