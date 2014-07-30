@@ -47,7 +47,6 @@ p {
 a {
    text-decoration: none;
    color: #00687f;
-   font-weight: bold;
    padding-left: 1%;
    padding-right: 1%;
 }
@@ -84,7 +83,6 @@ a:hover {
    padding-right: 2%;
    cursor: pointer;
    color: #00687f;
-   font-weight: bold;
    padding-left: 1%;
    padding-right: 1%;
 }
