@@ -1,6 +1,6 @@
 /****** BASE ******/
 
-html, body {
+/*html, body {
    height: 100%;
    margin: 0;
 }
@@ -8,7 +8,7 @@ html, body {
 .wrapper {
    height: 90vh;
    width: 100vw;
-}
+}*/
 
 .content {
    height: 100%;
