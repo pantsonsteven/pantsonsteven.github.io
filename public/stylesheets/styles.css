@@ -40,7 +40,7 @@ h4 {
 }
 
 p {
-   font-family: 'brandon_textlight', 'Courier', serif;
+   font-family: 'brandon_textlight', 'Avenir', 'Helvetica', serif;
    font-size: 1.3em;
 }
 
@@ -61,7 +61,7 @@ a:hover {
 }
 
 .description {
-   font-family: "brandon_textlight", "Courier", monospace;
+   font-family: "brandon_textlight", 'Avenir', 'Helvetica', monospace;
    font-size: .75em;
 }
 
@@ -109,7 +109,7 @@ a:hover {
 }
 
 .links {
-   font-family: 'brandon_textlight', 'Courier', serif;
+   font-family: 'brandon_textlight', 'Avenir', 'Helvetica', serif;
    font-size: 1.25em;
 }
 
@@ -128,7 +128,7 @@ a:hover {
 }
 
 .info {
-   font-family: "brandon_textlight", "Courier", monospace;
+   font-family: "brandon_textlight", 'Avenir', 'Helvetica', monospace;
    background-color:#1a1a1a;
    text-align: center;
    display: block;
@@ -187,7 +187,7 @@ a:hover {
 }
 
 .pdf-link {
-   font-family: "brandon_textlight", "Courier", monospace;
+   font-family: "brandon_textlight", 'Avenir', 'Helvetica', monospace;
    font-size: 1em;
    display: inline-block;
 }
@@ -250,7 +250,7 @@ a:hover {
 }
 
 .interest-list li {
-   font-family: "brandon_textlight", "Courier", monospace;
+   font-family: "brandon_textlight", 'Avenir', 'Helvetica', monospace;
    font-size: 1.3em;
 }
 
