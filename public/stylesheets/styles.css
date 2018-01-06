@@ -61,7 +61,7 @@ a:hover {
 }
 
 .description {
-   font-family: "brandon_textlight", 'Avenir', 'Helvetica', monospace;
+   font-family: "brandon_textlight", 'Avenir', 'Helvetica', sans-serif;
    font-size: .75em;
 }
 
@@ -109,7 +109,7 @@ a:hover {
 }
 
 .links {
-   font-family: 'brandon_textlight', 'Avenir', 'Helvetica', serif;
+   font-family: 'brandon_textlight', 'Avenir', 'Helvetica', sans-serif;
    font-size: 1.25em;
 }
 
@@ -128,7 +128,7 @@ a:hover {
 }
 
 .info {
-   font-family: "brandon_textlight", 'Avenir', 'Helvetica', monospace;
+   font-family: "brandon_textlight", 'Avenir', 'Helvetica', sans-serif;
    background-color:#1a1a1a;
    text-align: center;
    display: block;
@@ -187,7 +187,7 @@ a:hover {
 }
 
 .pdf-link {
-   font-family: "brandon_textlight", 'Avenir', 'Helvetica', monospace;
+   font-family: "brandon_textlight", 'Avenir', 'Helvetica', sans-serif;
    font-size: 1em;
    display: inline-block;
 }
@@ -213,7 +213,7 @@ a:hover {
 }
 
 .res-location {
-   font-family: "brandon_textmedium_italic", 'Avenir', "Helvetica", sans-serif;
+   font-family: "brandon_textmedium_italic", 'Avenir', 'Helvetica', sans-serif;
    font-size: .95em;
    line-height: 1em;
    margin-top: 2px;
@@ -250,8 +250,12 @@ a:hover {
 }
 
 .interest-list li {
-   font-family: "brandon_textlight", 'Avenir', 'Helvetica', monospace;
-   font-size: 1.3em;
+   font-size: .9em;
+}
+
+.interest-text {
+  font-family: 'brandon_textlight', 'Avenir', 'Helvetica', sans-serif;
+  font-size: 1.3em;
 }
 
 /*-------- FONTS --------*/
